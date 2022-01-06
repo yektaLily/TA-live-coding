@@ -99,6 +99,13 @@ counterFunc <- function(upTo){
 counterFunc(11)
 
 #for loop and "vectors" (just intro)
+#since for loop uses "how many times" you need to go through a sequence of numbers 
+#the command for that is:
+sequence_nums = seq(1,10) 
+#or you can do:
+evenly_spaced = seq(0, 1, length=10) 
+
+#the short hand for this is: 
 vec = 1:10 
 vec
 
@@ -151,5 +158,15 @@ is.numeric(members)
 is.character(members)
 is.integer(ages)
 is.double(ages)
+
+#very basic plotting 
+#we usually work with ggplot, but that involves installing packages that we'll cover next week. It's nothing scary. 
+#let's just work with a simple plot 
+x = rnorm(100)
+y = rnorm(100)
+#save the file to jpeg 
+jpeg("NewPlot.jpeg")
+plot(x, y, xlab = "x axis", ylab = "y axis", main = "simple plot x vs y", col = "red")
+dev.off() #we're done 
 
 
